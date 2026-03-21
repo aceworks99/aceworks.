@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About — aceworks.</title>
+<link rel="stylesheet" href="style.css"/>
+<style>
+.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:6rem; align-items:start; }
+.about-grid h2 { font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3vw,2.5rem); font-weight:800; margin-bottom:1.2rem; line-height:1.1; }
+.about-grid p { color:var(--muted); line-height:1.85; font-size:0.925rem; margin-bottom:0.9rem; }
+.about-panel { background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; }
+.about-panel-row { display:flex; align-items:center; justify-content:space-between; padding:1.2rem 1.8rem; border-bottom:1px solid var(--border); font-size:0.875rem; }
+.about-panel-row:last-child { border-bottom:none; }
+.about-panel-row span { color:var(--muted); font-size:0.82rem; }
+.about-panel-row strong { font-weight:600; }
+.values-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1px; background:var(--border); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; margin-top:3rem; }
+.value-item { background:var(--bg); padding:2rem; transition:background var(--transition); }
+.value-item:hover { background:var(--bg2); }
+.value-item h4 { font-family:'Playfair Display',serif; font-size:1rem; font-weight:700; margin-bottom:0.5rem; }
+.value-item p { color:var(--muted); font-size:0.82rem; line-height:1.65; }
+.value-label { font-size:0.65rem; font-weight:700; letter-spacing:0.1em; color:var(--muted); text-transform:uppercase; display:block; margin-bottom:0.5rem; }
+.cta-strip { background:var(--cta-bg); border-radius:var(--radius); padding:3rem; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1.5rem; }
+.cta-strip h3 { font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:800; color:var(--cta-text); margin-bottom:0.25rem; }
+.cta-strip p { color:var(--cta-text); opacity:0.6; font-size:0.875rem; }
+@media(max-width:900px) { .about-grid{grid-template-columns:1fr;gap:3rem;} .cta-strip{flex-direction:column;} }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo"><a href="index.html"><img id="site-logo" src="assets/logo-light.png" alt="aceworks."/></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html" id="nav-home">Home</a></li>
+    <li><a href="services.html" id="nav-services">Services</a></li>
+    <li><a href="how-it-works.html" id="nav-how">How It Works</a></li>
+    <li><a href="about.html" id="nav-about">About</a></li>
+    <li><a href="contact.html" id="nav-contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle">☾</button>
+    <a href="contact.html" class="btn-cta">Book a free audit →</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <span class="section-label">Who We Are</span>
+  <h1>About <em style="font-style:italic;color:var(--muted);">aceworks.</em></h1>
+  <p>An AI automation agency built for eCommerce store owners who want to grow without working more hours.</p>
+</div>
+
+<section>
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <span class="section-label">The Mission</span>
+        <h2>AI automation that actually makes sense for eCommerce</h2>
+        <p>aceworks. exists to give eCommerce store owners access to AI automation that used to be reserved for big brands with big budgets.</p>
+        <p>We build one core system and tweak it specifically for each client. Fast to deploy. Simple to manage. Built to last.</p>
+        <p>No fluff, no long sales processes. You reach out, we look at your store, we tell you exactly what we can do — and we sort the rest out in DMs or email.</p>
+      </div>
+      <div class="about-panel">
+        <div class="about-panel-row"><strong>Focus</strong><span>eCommerce only</span></div>
+        <div class="about-panel-row"><strong>Launch time</strong><span>7 days from agreement</span></div>
+        <div class="about-panel-row"><strong>Agreement process</strong><span>DMs or email</span></div>
+        <div class="about-panel-row"><strong>Setup</strong><span>Done for you</span></div>
+        <div class="about-panel-row"><strong>Contract</strong><span>Month-to-month</span></div>
+        <div class="about-panel-row"><strong>Reporting</strong><span>Monthly</span></div>
+        <div class="about-panel-row"><strong>Technology</strong><span>Gemini API</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg2">
+  <div class="container">
+    <span class="section-label">How We Operate</span>
+    <h2 class="section-title">Our values</h2>
+    <div class="values-grid">
+      <div class="value-item"><span class="value-label">01</span><h4>Results only</h4><p>We're measured by what the systems actually do — not features. If something isn't working, we fix it.</p></div>
+      <div class="value-item"><span class="value-label">02</span><h4>Straight talking</h4><p>If automation isn't right for your store right now, we'll say so. Honest over profitable, every time.</p></div>
+      <div class="value-item"><span class="value-label">03</span><h4>Move fast</h4><p>Every week without automation is time and money lost. Audit to live in 7 days — we don't drag things out.</p></div>
+      <div class="value-item"><span class="value-label">04</span><h4>Keep it simple</h4><p>The best system is the one that works reliably. Simplest tool that gets the job done, not the most impressive one.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="cta-strip">
+      <div><h3>Want to work together?</h3><p>Reach out via email or Instagram — we'll sort everything in DMs.</p></div>
+      <a href="contact.html" style="background:var(--bg);color:var(--text);padding:0.7rem 1.6rem;border-radius:100px;font-size:0.875rem;font-weight:600;text-decoration:none;">Get in touch →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="index.html"><img id="footer-logo" src="assets/logo-light.png" alt="aceworks."/></a>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
+    <li><a href="how-it-works.html">How It Works</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+  </ul>
+  <small>© 2026 aceworks. · ace.works19@gmail.com</small>
+</footer>
+<script src="theme.js"></script>
+<script src="https://acechatbot-1.onrender.com/bot.js" data-client="aceworks"></script>
+</body>
+</html>
