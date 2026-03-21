@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>How It Works — aceworks.</title>
+<link rel="stylesheet" href="style.css"/>
+<style>
+.steps { margin-top:4rem; }
+.step { display:grid; grid-template-columns:80px 1fr; gap:2.5rem; padding:2.8rem 0; border-bottom:1px solid var(--border); align-items:start; }
+.step:last-child { border-bottom:none; }
+.step-num { font-family:'Playfair Display',serif; font-size:3rem; font-weight:900; color:var(--border); line-height:1; }
+.step h3 { font-family:'Playfair Display',serif; font-size:1.3rem; font-weight:800; margin-bottom:0.5rem; }
+.step p { color:var(--muted); font-size:0.9rem; line-height:1.8; }
+.step-tag { display:inline-block; background:var(--bg3); border:1px solid var(--border); color:var(--muted); font-size:0.68rem; font-weight:600; letter-spacing:0.08em; padding:0.2rem 0.65rem; border-radius:100px; margin-top:0.8rem; }
+.gemini-strip { background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius); padding:3rem; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
+.gemini-strip h3 { font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:800; margin-bottom:0.8rem; }
+.gemini-strip p { color:var(--muted); line-height:1.8; font-size:0.9rem; }
+.gemini-visual { background:var(--bg3); border:1px solid var(--border); border-radius:var(--radius-sm); padding:2rem; text-align:center; }
+.gemini-visual span { font-family:'Playfair Display',serif; font-size:1.1rem; font-style:italic; color:var(--muted); }
+.faq-list { margin-top:3.5rem; }
+.faq-item { border-bottom:1px solid var(--border); }
+.faq-q { font-size:0.95rem; font-weight:600; padding:1.4rem 0; cursor:pointer; display:flex; justify-content:space-between; align-items:center; user-select:none; gap:1rem; }
+.faq-q .faq-icon { color:var(--muted); font-size:1.2rem; font-weight:300; flex-shrink:0; }
+.faq-item.open .faq-icon::before { content:'–'; }
+.faq-icon::before { content:'+'; }
+.faq-a { color:var(--muted); line-height:1.8; font-size:0.88rem; padding-bottom:1.4rem; display:none; }
+.faq-item.open .faq-a { display:block; }
+@media(max-width:900px) { .step{grid-template-columns:50px 1fr;gap:1.5rem;} .step-num{font-size:2rem;} .gemini-strip{grid-template-columns:1fr;gap:2rem;} }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo"><a href="index.html"><img id="site-logo" src="assets/logo-light.png" alt="aceworks."/></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html" id="nav-home">Home</a></li>
+    <li><a href="services.html" id="nav-services">Services</a></li>
+    <li><a href="how-it-works.html" id="nav-how">How It Works</a></li>
+    <li><a href="about.html" id="nav-about">About</a></li>
+    <li><a href="contact.html" id="nav-contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle">☾</button>
+    <a href="contact.html" class="btn-cta">Book a free audit →</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <span class="section-label">The Process</span>
+  <h1>Audit to <em style="font-style:italic;color:var(--muted);">live</em><br/>in 7 days.</h1>
+  <p>Here's exactly what happens from the moment you reach out — no fluff.</p>
+</div>
+
+<section>
+  <div class="container">
+    <span class="section-label">Step by Step</span>
+    <h2 class="section-title">How we work</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">01</div><div><h3>You reach out</h3><p>Fill out the form, email us, or slide into Instagram DMs. We respond and start a conversation about your store and what you actually need.</p><span class="step-tag">Day 0</span></div></div>
+      <div class="step"><div class="step-num">02</div><div><h3>Free AI Opportunity Map</h3><p>We look at your store and send you a written document showing what can be automated, what order to do it in, and the expected impact. Free, no strings attached.</p><span class="step-tag">Day 1</span></div></div>
+      <div class="step"><div class="step-num">03</div><div><h3>We agree on what to build</h3><p>Everything is sorted over email or DMs — no long calls required unless you want one. When you're happy, we get started.</p><span class="step-tag">Day 1–2</span></div></div>
+      <div class="step"><div class="step-num">04</div><div><h3>We build your systems</h3><p>Built from scratch, trained on your store's products and brand voice. We test everything before it goes anywhere near your customers.</p><span class="step-tag">Day 2–6</span></div></div>
+      <div class="step"><div class="step-num">05</div><div><h3>Go live</h3><p>Systems go live. We walk you through everything — how to read results, what to expect in the first 30 days, and who to contact if anything needs tweaking.</p><span class="step-tag">Day 7</span></div></div>
+      <div class="step"><div class="step-num">06</div><div><h3>Monthly optimization</h3><p>Every month we review the data, make improvements, and send a performance report. That's what the retainer covers.</p><span class="step-tag">Ongoing</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg2">
+  <div class="container">
+    <div class="gemini-strip">
+      <div>
+        <span class="section-label">Technology</span>
+        <h3>Built on Gemini API</h3>
+        <p>All our bots are powered by Google's Gemini API. We specifically chose tools that keep your costs down — no expensive monthly subscriptions get passed on to you.</p>
+        <p style="margin-top:0.8rem;">The result is the same quality AI that big brands use, at a price that makes sense for growing eCommerce stores.</p>
+      </div>
+      <div class="gemini-visual"><span>Powered by Gemini API.</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <span class="section-label">FAQ</span>
+    <h2 class="section-title">Common questions</h2>
+    <div class="faq-list">
+      <div class="faq-item open"><div class="faq-q">Do I need any technical skills?<span class="faq-icon"></span></div><div class="faq-a">None at all. We handle the full build and setup. We'll walk you through how to read results — but you never need to touch code.</div></div>
+      <div class="faq-item"><div class="faq-q">Which platforms do you support?<span class="faq-icon"></span></div><div class="faq-a">Shopify, WooCommerce, BigCommerce, and most custom-built stores. Reach out first and we'll confirm before any commitment.</div></div>
+      <div class="faq-item"><div class="faq-q">Is there a long-term contract?<span class="faq-icon"></span></div><div class="faq-a">No. Retainers are month-to-month after setup. The setup fee covers the build. Monthly covers ongoing management and optimization.</div></div>
+      <div class="faq-item"><div class="faq-q">How do we finalize the agreement?<span class="faq-icon"></span></div><div class="faq-a">Over email or Instagram DMs. No formal calls required unless you want one. We keep things simple and move fast.</div></div>
+      <div class="faq-item"><div class="faq-q">What's in the free audit?<span class="faq-icon"></span></div><div class="faq-a">A written AI Opportunity Map — what can be automated, in what order, and the expected impact. Yours to keep whether you work with us or not.</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    <div style="background:var(--cta-bg);border-radius:var(--radius);padding:3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;">
+      <div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:var(--cta-text);margin-bottom:0.2rem;">Sounds straightforward?</h3>
+        <p style="color:var(--cta-text);opacity:0.6;font-size:0.875rem;">It is. Book a free audit and we'll prove it.</p>
+      </div>
+      <a href="contact.html" style="background:var(--bg);color:var(--text);padding:0.7rem 1.6rem;border-radius:100px;font-size:0.875rem;font-weight:600;text-decoration:none;">Book free audit →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="index.html"><img id="footer-logo" src="assets/logo-light.png" alt="aceworks."/></a>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
+    <li><a href="how-it-works.html">How It Works</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+  </ul>
+  <small>© 2026 aceworks. · ace.works19@gmail.com</small>
+</footer>
+<script src="theme.js"></script>
+<script src="https://acechatbot99.netlify.app/bot.js" data-client="aceworks"></script>
+</body>
+</html>

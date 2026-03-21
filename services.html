@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Services — aceworks.</title>
+<link rel="stylesheet" href="style.css"/>
+<style>
+.service-block { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; padding:5rem 0; border-bottom:1px solid var(--border); }
+.service-block:last-child { border-bottom:none; }
+.service-block.flip { direction:rtl; }
+.service-block.flip > * { direction:ltr; }
+.service-block h3 { font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:800; margin-bottom:0.9rem; line-height:1.15; }
+.service-block p { color:var(--muted); line-height:1.85; font-size:0.925rem; margin-bottom:0.7rem; }
+.service-num { font-family:'Playfair Display',serif; font-size:0.7rem; font-weight:700; color:var(--muted); letter-spacing:0.1em; margin-bottom:0.7rem; display:block; }
+.service-visual { background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius); aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; transition:border-color var(--transition); }
+.service-visual:hover { border-color:var(--text); }
+.service-visual span { font-family:'Playfair Display',serif; font-size:1rem; color:var(--muted); font-style:italic; font-weight:700; }
+.service-block.coming { opacity:0.42; pointer-events:none; }
+.coming-label { display:inline-flex; align-items:center; gap:0.4rem; font-size:0.68rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); background:var(--bg3); border:1px dashed var(--border); padding:0.2rem 0.7rem; border-radius:100px; margin-bottom:0.8rem; }
+.pricing-wrap { margin-top:3rem; max-width:440px; }
+.price-card { background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius); padding:2.5rem; position:relative; transition:border-color var(--transition),transform var(--transition); }
+.price-card.featured { background:var(--cta-bg); border-color:var(--cta-bg); }
+.price-card.featured * { color:var(--cta-text) !important; }
+.price-card.featured .price-list li { border-bottom-color:rgba(255,255,255,0.15) !important; }
+.price-num { font-family:'Playfair Display',serif; font-size:3rem; font-weight:800; margin:0.8rem 0 0.2rem; line-height:1; }
+.price-num sub { font-size:1rem; font-weight:400; opacity:0.6; }
+.price-desc { font-size:0.82rem; opacity:0.65; margin-bottom:1.6rem; }
+.price-list { list-style:none; margin-bottom:1.8rem; }
+.price-list li { font-size:0.875rem; padding:0.55rem 0; border-bottom:1px solid var(--border); display:flex; gap:0.6rem; align-items:flex-start; }
+.price-list li:last-child { border-bottom:none; }
+.price-list li::before { content:'–'; font-weight:600; flex-shrink:0; margin-top:1px; }
+.price-note { margin-top:1.2rem; font-size:0.78rem; color:var(--muted); line-height:1.6; padding-top:1.2rem; border-top:1px solid var(--border); }
+@media(max-width:900px) { .service-block{grid-template-columns:1fr;gap:2.5rem;} .service-block.flip{direction:ltr;} .pricing-wrap{max-width:100%;} }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo"><a href="index.html"><img id="site-logo" src="assets/logo-light.png" alt="aceworks."/></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html" id="nav-home">Home</a></li>
+    <li><a href="services.html" id="nav-services">Services</a></li>
+    <li><a href="how-it-works.html" id="nav-how">How It Works</a></li>
+    <li><a href="about.html" id="nav-about">About</a></li>
+    <li><a href="contact.html" id="nav-contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle">☾</button>
+    <a href="contact.html" class="btn-cta">Book a free audit →</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <span class="section-label">What We Offer</span>
+  <h1>Our <em style="font-style:italic;color:var(--muted);">services</em></h1>
+  <p>Custom AI automation for eCommerce stores. Built once, tweaked specifically for yours.</p>
+</div>
+
+<section>
+  <div class="container">
+    <div class="service-block">
+      <div>
+        <span class="service-num">Service 01</span>
+        <h3>AI Chatbot & Receptionist</h3>
+        <p>A custom-trained AI assistant that lives on your store around the clock. It handles customer questions, recommends products, captures leads, and deals with support — without you lifting a finger.</p>
+        <p>Trained on your products, FAQs, return policy, and brand voice. Works on Shopify, WooCommerce, and most platforms.</p>
+        <p style="font-size:0.8rem;color:var(--muted);margin-top:0.6rem;">Powered by Gemini API — we use tools that keep your cost down.</p>
+        <span class="card-tag" style="margin-top:1.2rem;display:inline-block;">$99 setup · $299/mo</span>
+      </div>
+      <div class="service-visual"><span>AI Receptionist.</span></div>
+    </div>
+
+    <div class="service-block coming flip">
+      <div>
+        <span class="coming-label">🔒 Coming Soon</span>
+        <h3>Abandoned Cart Recovery</h3>
+        <p>Automated email sequences that follow up with customers who added items to their cart but did not check out. Timed and personalized to exactly what they left behind.</p>
+        <p>A 3-email sequence at 1 hour, 24 hours, and 72 hours after abandonment. Set once, runs forever.</p>
+      </div>
+      <div class="service-visual" style="border-style:dashed;"><span>Cart Recovery.</span></div>
+    </div>
+
+    <div class="service-block coming">
+      <div>
+        <span class="coming-label">🔒 Coming Soon</span>
+        <h3>Voice Agent</h3>
+        <p>A full AI voice receptionist that picks up the phone, answers questions, and handles customer calls 24/7 — without any staff. Currently in development.</p>
+      </div>
+      <div class="service-visual" style="border-style:dashed;"><span>Voice Agent.</span></div>
+    </div>
+
+    <div class="service-block coming flip">
+      <div>
+        <span class="coming-label">🔒 Coming Soon</span>
+        <h3>More Powerful AI Tools</h3>
+        <p>New AI systems are constantly being built. More automation, more revenue, less work — dropping soon.</p>
+      </div>
+      <div class="service-visual" style="border-style:dashed;"><span>In Development.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg2">
+  <div class="container">
+    <span class="section-label">Pricing</span>
+    <h2 class="section-title">Simple, honest pricing</h2>
+    <p class="section-sub">One plan. Everything included. No hidden fees. Cancel anytime.</p>
+    <div class="pricing-wrap">
+      <div class="price-card featured">
+        <span class="section-label">Standard Plan</span>
+        <div class="price-num">$299<sub>/mo</sub></div>
+        <p class="price-desc">+ $99 one-time setup fee</p>
+        <ul class="price-list">
+          <li>AI Chatbot trained on your store</li>
+          <li>Custom prompt and brand voice</li>
+          <li>Shopify, WooCommerce and more</li>
+          <li>Monthly performance report</li>
+          <li>Ongoing maintenance and updates</li>
+          <li>Email support</li>
+        </ul>
+        <a href="contact.html" class="btn btn-outline" style="width:100%;justify-content:center;">Get started →</a>
+        <p class="price-note">As new services launch, existing clients get early access free for the first month.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="index.html"><img id="footer-logo" src="assets/logo-light.png" alt="aceworks."/></a>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
+    <li><a href="how-it-works.html">How It Works</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+  </ul>
+  <small>© 2026 aceworks. · ace.works19@gmail.com</small>
+</footer>
+<script src="theme.js"></script>
+<script src="https://acechatbot99.netlify.app/bot.js" data-client="aceworks"></script>
+</body>
+</html>
